@@ -3,13 +3,13 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <nav className="Navbar">
-            <div className="Title">
+            <div className="navTitle">
                 E-Comerce
             </div>
             <div>
-                <button className="btn">Cafe</button>
-                <button className="btn">Medialunas</button>
-                <button className="btn">Bizcochos</button>
+                <button className="btnNav">Cafe</button>
+                <button className="btnNav">Medialunas</button>
+                <button className="btnNav">Bizcochos</button>
             </div>
         </nav>
     )

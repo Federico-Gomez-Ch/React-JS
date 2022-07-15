@@ -1,4 +1,19 @@
 .Navbar{
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
+.btnNav{
+  padding: 5px;
+  margin:  10px;
+  color:black;
+  background-color: white;
+  border: none;
+}
+
+.navTitle{
+    display: flex;
+    flex-wrap: wrap;
 }
