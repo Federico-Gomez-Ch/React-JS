@@ -3,6 +3,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     flex-direction: row;
+    background: rgb(255, 245, 214);
 }
 
 .btnNav{
