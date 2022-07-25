@@ -30,8 +30,8 @@ return (
     <div className='CounterContainer'>
         <div className='CounterSoonContainer'>
         <button disabled={count === initial} className='countBtn' onClick={decrement}> - </button>
-        <p>{count}</p>
         <button disabled={count === stock}  className='countBtn'onClick={increment}> + </button>
+        <p>{count}</p>
        <div>
         <button disabled={stock === 0 ? true : null} className='cartBtn' onClick={()=> onAdd (count)}>Agregar al carrito</button>    
        </div>
