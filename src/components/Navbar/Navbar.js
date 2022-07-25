@@ -6,17 +6,16 @@ import CartWidget from './CartWidget/CartWidget'
 const Navbar = () => {
     return (
         <nav className="Navbar">
-            <div className="navTitle">
-                E-Comerce
+            <div className="logo">
+                <img className='logoImg' src='images/logo.png' alt='logo'/>
+            
             </div>
-            <div>
-                {/* {React.createElement(Button, {label: 'prueba'})} */}
-                <Button label='cafe' color='red' handleClick={()=> console.log ('Cafe')}>Cafe</Button>
-                <Button label='medialunas' color= 'blue' handleClick ={()=> console.log ('Medialunas')}> Medialunas </Button>
-                <Button label='Bizcochos' color='green' handleClick ={()=> console.log ('Bizcochos')}>Bizcochos</Button>
-
+            <div >
+                <Button  label='Cafes'/>
+                <Button  label= 'Comida'/>
+                <Button  label='Nosotros'/>
             </div>
-            <CartWidget />
+            <CartWidget/>
         </nav>
     )
 }
