@@ -21,7 +21,7 @@ function App() {
       <header className='.App-header'>
         <Navbar/>
         {/* <Counter show={show} stock={10} initial={1} onAdd={handleOnAdd}/> */}
-        <ItemListContainer show={show} setShow={setShow} greeting="Hola Dev!"/>
+        <ItemListContainer show={show} setShow={setShow} greeting="Hola Dev"/>
         </header>
     </div>
   );
