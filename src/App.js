@@ -1,8 +1,12 @@
 import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-import Counter from './components/Navbar/Counter/Counter';
-import ItemListContainer from './components/Navbar/ItemListContainer/ItemListContainer';
+import Counter from './components/Counter/Counter'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+</style>
+
 
 function App() {
 
@@ -14,10 +18,11 @@ function App() {
  
   return (
     <div className="App">
+      <header className='.App-header'>
         <Navbar/>
-        <Counter show={show} stock={10} initial={1} onAdd={handleOnAdd}/>
-        <ItemListContainer show={show} setShow={setShow} greeting="bienvenidx"/>
-        
+        {/* <Counter show={show} stock={10} initial={1} onAdd={handleOnAdd}/> */}
+        <ItemListContainer show={show} setShow={setShow} greeting="Hola Dev!"/>
+        </header>
     </div>
   );
 }

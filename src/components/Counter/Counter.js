@@ -28,7 +28,7 @@ const increment = () => {
 console.log('va a renderizar')
 return (
     <div className='CounterContainer'>
-        <div className='CounterSoonContainer'>
+        <div className='CounterSoonContainer'> 
         <button disabled={count === initial} className='countBtn' onClick={decrement}> - </button>
         <button disabled={count === stock}  className='countBtn'onClick={increment}> + </button>
         <p>{count}</p>
