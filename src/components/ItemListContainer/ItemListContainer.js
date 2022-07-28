@@ -17,10 +17,10 @@ const [loading, setLoading] = useState( true)
         })
     },[])
 
-const productosTransformados = products.map(products => {
+/* const productosTransformados = products.map(products => {
     return <li key={products.id}>{products.name}</li>
 })
-console.log(productosTransformados)
+console.log(productosTransformados) */
 
 if (loading){
 return <h1>Cargando productos...</h1>

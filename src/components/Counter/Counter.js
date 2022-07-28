@@ -12,7 +12,6 @@ useEffect (() =>{
 },[show])
 
 const decrement = () => {
-   /*  state[1](state[0] - 1) */
    if(count > initial){
     setCount(count - 1);
    }
@@ -20,7 +19,6 @@ const decrement = () => {
 }
 
 const increment = () => {
-   /*  state[1](state[0] + 1) */
    if(count < stock){
     setCount(count + 1)
    }
