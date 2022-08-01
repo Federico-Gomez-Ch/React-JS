@@ -3,7 +3,7 @@ import './Counter.css'
 
 const Counter = ({show,stock,initial,onAdd}) => {
  
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     
 useEffect (() =>{
     console.log('function callback useEffect')

@@ -1,16 +1,14 @@
 import './App.css';
-import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 </style>
 
 
 function App() {
-
-  const [show, setShow] = useState(true)
  
  const handleOnAdd = (quantity) => {
   console.log ('cantidad de items agregados', quantity)
@@ -19,9 +17,13 @@ function App() {
   return (
     <div className="App">
       <header className='.App-header'>
+        <BrowserRouter>
         <Navbar/>
-        <ItemListContainer show={show} setShow={setShow} greeting="Hola Dev"/>
-        <ItemDetailContainer show={show} setShoe={setShow}/>
+        <Routes>
+        <Route path= '/' element={<ItemListContainer greeting="Hola Dev"/>} />
+        <Route path= '/detail/:productId' element={<ItemDetailContainer />}/>
+        </Routes>
+        </BrowserRouter>
         </header>
     </div>
   );

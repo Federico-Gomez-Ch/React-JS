@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {getProducts} from '../../asyncMock';
 import ItemList from "../ItemList/ItemList";
+import './ItemListContainer.css'
 
 
 const ItemListContainer = ({greeting, setShow, show}) => {
@@ -17,13 +18,9 @@ const [loading, setLoading] = useState( true)
         })
     },[])
 
-/* const productosTransformados = products.map(products => {
-    return <li key={products.id}>{products.name}</li>
-})
-console.log(productosTransformados) */
 
 if (loading){
-return <h1>Cargando productos...</h1>
+return <div className="spinner"></div>
 }
 
 
