@@ -2,7 +2,7 @@ import './ItemDetail.css'
 import Counter from '../Counter/Counter'
 import { Link } from 'react-router-dom'
 
-const ItemDetail = ({id,name,img,category,description,price,stock}) => {
+const ItemDetail = ({name,img,category,description,price,stock}) => {
     const handleOnAdd = (quantity) => {
         console.log('Cant. de productos agregados', quantity)
     }
