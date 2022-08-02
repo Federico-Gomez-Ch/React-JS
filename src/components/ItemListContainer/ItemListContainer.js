@@ -1,22 +1,25 @@
 import { useState, useEffect } from "react";
-import {getProducts} from '../../asyncMock';
+import {getProduct, getProductsByCategory} from '../../asyncMock';
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css'
+import { useParams } from "react-router-dom";
 
-
-const ItemListContainer = ({greeting, setShow, show}) => {
+const ItemListContainer = ({}) => {
 const [products, setProducts]= useState ([])
 const [loading, setLoading] = useState( true)
 
-    useEffect(() => {
-        getProducts().then(response => {
-            setProducts (response)
-        }).catch(error =>{
-            console.log (error)
-        }).finally(() =>{
+const {categoryId} = useParams()
+useEffect(() => {
+    const asyncFunction = categoryId ? getProductsByCategory : getProduct
+    
+    asyncFunction(categoryId).then(response => {
+        setProducts(response)
+    }).catch(error => {
+        console.log(error)
+    }).finally(() => {
         setLoading(false)
-        })
-    },[])
+    })
+}, [categoryId])
 
 
 if (loading){
@@ -26,7 +29,7 @@ return <div className="spinner"></div>
 
 return (
     <>
-        <h1>{greeting}</h1>
+
         <ItemList products={products}/>
     </>
     )

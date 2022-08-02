@@ -1,7 +1,7 @@
 .button{
     cursor: pointer;
-    color: #fff;
-    background-color: inherit;
+    color: black;
+    background-color: white;
     margin:10px;
     font-size: 90%;
     font-weight: lighter;
