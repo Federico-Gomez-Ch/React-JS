@@ -32,11 +32,6 @@
     margin: 0px;
     padding-bottom: 0px;
     text-transform: uppercase;
-
-}
-.tipogrphy{
-    color: #faa227;
-    margin: 0px ;
 }
 .stock {
     line-height: 1.8;
@@ -47,6 +42,12 @@
 .description{
     margin-left: 50px;
     display: block;
-    color:#d17b03;
+    font-size: medium;
+}
+.thanks{
+    margin: 2px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
     font-size: medium;
 }

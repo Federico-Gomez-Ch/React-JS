@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom'
 
 const Item = ({ product}) => {
 
-    
+    const handleClick = (e) => {
+        e.stopPropagation()
+        console.log('click en item')
+    }
+
     
     return (
-        <div className="container-card divInline">
+        <div className="container-card divInline" onClick={handleClick}>
             <div className="card" >
                 <img src={product.img} />
                 <div className="contenido-card">
