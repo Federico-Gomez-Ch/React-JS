@@ -1,3 +1,9 @@
 .Cart{
-    max-width: 30px;
+    max-width: 45px;
+}
+
+.a{
+    padding-left: 5px;
+    color: aliceblue;
+    text-decoration: none;
 }

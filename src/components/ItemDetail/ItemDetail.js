@@ -1,14 +1,21 @@
 import './ItemDetail.css'
 import Counter from '../Counter/Counter'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext} from 'react'
+import { CartContext } from '../../context/CartContext'
 
 
-const ItemDetail = ({name,img,category,description,price,stock}) => {
-    const [quantity,setQuantity] = useState(0)
+const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
+    const [quantity, setQuantity] = useState(0)
+    const { addItem, getProductQuantity } = useContext(CartContext)
+    const quantityAdded = getProductQuantity(id)
+
     const handleOnAdd = (quantity) => {
-        console.log('Cant. de productos agregados', quantity)
+        console.log('agregue al carrito')
+        console.log(quantity)
         setQuantity(quantity)
+        addItem({id, name, price, quantity})
+        console.log(addItem({id, name, price, quantity}))
     }
     return(
         <div className='ItemDetail'>
@@ -22,7 +29,7 @@ const ItemDetail = ({name,img,category,description,price,stock}) => {
                     <p className='stock'>Cantidad disponible {stock}</p>
                     <h5 className='price '>${price}</h5>
                     { quantity > 0 ? <h6 className='thanks'> Gracias por su compra!</h6> : null }
-                    { quantity > 0 ? <Link to='/cart' className='ir'><button>Ir al carrito</button></Link> : <Counter stock={stock} onAdd={handleOnAdd} />}
+                    { quantity > 0 ? <Link to='/cart' className='ir'><button>Ir al carrito</button></Link> : <Counter stock={stock} onAdd={handleOnAdd}initial={quantityAdded}/>}
                 
 </div>
                 <p className='description'>{description}</p>

@@ -3,7 +3,7 @@ import { getDetail } from "../../asyncMock"
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-const ItemDetailContainer = ()=> {
+const ItemDetailContainer = ({addItem})=> {
     
         const [products,setProducts] = useState()
         const [loading, setLoading] = useState(true)
@@ -26,7 +26,7 @@ const ItemDetailContainer = ()=> {
     
         return (
             <>
-            <ItemDetail {...products}/>
+            <ItemDetail {...products} addItem={addItem}/>
             </>
         )
     
