@@ -1,32 +1,35 @@
-import { useState, useEffect} from 'react'
-import { getDetail } from "../../asyncMock"
 import './ItemDetailContainer.css'
+import { useState, useEffect} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-const ItemDetailContainer = ({addItem})=> {
-    
-        const [products,setProducts] = useState()
-        const [loading, setLoading] = useState(true)
-        
-        const {productId} = useParams()
+import { getDoc, doc} from 'firebase/firestore'
+import {db} from '../../services/firebase/index'
 
-        useEffect(() => {
-            getDetail(productId).then(response => {
-                setProducts(response)
-            }).catch(error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
-            })  
-        }, [productId])
-    
-        if(loading) {
-            return  <div className="spinner"></div>
-        }
-    
+const ItemDetailContainer = ({addItem})=> {
+        const [product,setProduct] = useState([])
+        const [loading, setLoading] = useState(true)
+
+    const { productId } = useParams()
+
+    useEffect(() => {
+        getDoc(doc(db, 'products', productId)).then (response => {
+            const values = response.data()
+            const product = {id: response.id, ... values}
+            setProduct(product)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+    }, [productId])
+
+    if(loading) {
+        return <h1 className='item'>Cargando...</h1>
+    }
+
         return (
             <>
-            <ItemDetail {...products} addItem={addItem}/>
+            <ItemDetail {...product} addItem={addItem}/>
             </>
         )
     

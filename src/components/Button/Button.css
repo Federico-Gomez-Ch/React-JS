@@ -1,8 +1,10 @@
 .button{
     cursor: pointer;
-    color: black;
-    background-color: white;
-    margin:10px;
+    color: white;
+    background-color: #26232299;
+    margin: 10px;
     font-size: 90%;
     font-weight: lighter;
+    border: none;
+    border-radius: 10px;
 }

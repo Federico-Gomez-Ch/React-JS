@@ -21,7 +21,7 @@ const products = [
     name: 'Box degustacion', 
     price: 180, 
     category: 'Box', 
-    img: 'https://cdn.shopify.com/s/files/1/0500/8182/4922/products/Degustacion2.0_1_720x.jpg?v=1658937979',
+    img: 'https://imgs.search.brave.com/tytkCg3jkK3TfZ3orYIaEyjNLQ8cmP862QTepuqrgWo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4u/c2hvcGlmeS5jb20v/cy9maWxlcy8xLzA1/MDAvODE4Mi80OTIy/L3Byb2R1Y3RzL2Jv/eGRlZ3VzdGFjaW9u/XzFfMjAwMHguanBn/P3Y9MTYyNzU4MDYz/NA',
     stock: 10, 
     description:'Box degustativo con variedades de cafe'}
 ]
@@ -30,7 +30,7 @@ export const getProduct = () => {
     return new Promise((resolve) => {
         setTimeout(() =>{
             resolve(products)
-        }, 1000
+        }, 500
         )
     })
 }
@@ -42,7 +42,7 @@ export const getDetail = (id) => {
             resolve(products.find(prod =>  { 
                 return prod.id === id
             }))
-        }, 1000)
+        }, 500)
     })
 }
 
