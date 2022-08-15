@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import {getProduct, getProductsByCategory} from '../../asyncMock';
-import ItemList from "../ItemList/ItemList";
-import './ItemListContainer.css'
-import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({greeting}) => {
+import './ItemListContainer.css'
+import {useEffect, useState} from 'react'
+import { getProduct,getProductsByCategory  } from "../../asyncMock"
+import  ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
+
+const ItemListContainer = ({ greeting}) => {
 
     const [products,setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    
     const { categoryId } = useParams()
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const ItemListContainer = ({greeting}) => {
     
     return (
         <>
-        
+            {/* <h1 className='item'>{greeting}</h1> */}
             <h1 className="item up">{` ${categoryId || ''}`}</h1>
             <ItemList products={products} />
         </>

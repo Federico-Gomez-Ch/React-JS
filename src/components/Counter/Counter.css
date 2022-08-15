@@ -30,7 +30,11 @@
         width: 100%;
         border-radius: 10px;
         margin-bottom: 10px;
-        color: #ac2330;
+        color: #262322;
         font-size: medium;
         font-weight: bold;
+    }
+
+    p{
+        color: #262322;
     }

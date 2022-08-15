@@ -1,21 +1,30 @@
 .ItemDetail{
     display: flex;
-    padding: 15px;
-    margin-left: 25%;
+    /* padding: 15px;
+    margin-left: 25%; */
     width: 50%;
     flex-direction: column;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: #ffeed4;
     border-radius: 15px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    margin: 20px;
     
 }
 .detail{
     display: flex;
 }
 
+.price{
+    color: #262322;
+}
+
+.title{
+    color: #000;
+}
 .img{
-    width: 20rem;
-    padding: 15px;
+    width: 22rem;
+    padding-top: 120px;
+    border-radius: 20px;
 }
 .ContImg{
     display: inline;
@@ -25,29 +34,28 @@
     display: inline;
     margin: 10px;
 }
-.categorie{
-    line-height: 1.8;
-    color: #6a6a6a;
-    font-size: 14px;
+.category{
+    color: #262322;
+    font-size: 20px;
     margin: 0px;
     padding-bottom: 0px;
     text-transform: uppercase;
 }
 .stock {
-    line-height: 1.8;
-    color: #6a6a6a;
-    font-size: 14px;
+    color: #262322;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 .description{
     margin-left: 50px;
     display: block;
-    font-size: medium;
+    font-size: 20px;
+    color: #262322;
 }
 .thanks{
     margin: 2px;
     margin-top: 5px;
     text-decoration: none;
-    color: black;
+    color: #262322;
     font-size: medium;
 }
