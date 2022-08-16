@@ -2,11 +2,23 @@ import './CartContainer.css'
 import { useContext } from "react"
 import { CartContext } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem'
-
+import {Link} from 'react-router-dom'
+import Button from '../Button/Button'
 const Cart= () => {
     const { cart, clearCart, getTotal} = useContext(CartContext)  
 
     const total = getTotal()
+
+    if(total === 0){
+        return(
+            <>
+        <h1>No hay productos agregados al carrito</h1>
+        <button>
+        <Link className='noItems' to='/'>Ver productos</Link>
+        </button>
+       </>
+        )}
+    
 
     return(
         <>
@@ -23,5 +35,6 @@ const Cart= () => {
         </>
     )
 }
+
 
 export default Cart
