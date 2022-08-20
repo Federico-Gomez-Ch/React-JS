@@ -25,7 +25,7 @@ return (
         <button className='countBtn' onClick={decrement} disabled={quantity === initial ? true : null}>-</button>
         <h5 className='counter'>{quantity}</h5>
         <button className='countBtn' onClick={increment} disabled={quantity === stock ? true : null}>+</button>
-         <FaCartPlus disabled={stock === 0 ? true : null} className='cartBtn' onClick={()=> onAdd (quantity)}/>
+        <FaCartPlus className='cartBtn' disabled={stock === 0 ? true : null}  onClick={()=> onAdd (quantity)}/>
     </div>
     </div>
 )
