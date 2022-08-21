@@ -16,7 +16,7 @@ const Checkout = () => {
         },
         items:cart,
         date: Timestamp.fromDate(new Date()),
-        total
+        total: `${total}`
     }
 
     const productsids = cart.map(prod => prod.id)
@@ -46,7 +46,7 @@ const Checkout = () => {
 
     if(noStock.length === 0) {
         const refOrder = collection(db, 'orders')
-        const orderAdded = addDoc(refOrder, order)
+        const orderAdded =  addDoc(refOrder, order)
         batch.commit()
         console.log(orderAdded.id)
         clearCart()
@@ -56,8 +56,8 @@ const Checkout = () => {
 
 
     }catch(error) {
-        console.log(error)
-    }finally {   console.log('se termino la ejecucion de la funcion createOrder')
+    }finally {   
+    console.log('se termino la ejecucion de la funcion createOrder')
     }
 }
 
