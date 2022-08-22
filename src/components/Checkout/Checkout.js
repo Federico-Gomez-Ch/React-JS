@@ -1,22 +1,25 @@
-import { useContext } from "react"
+import { useContext,useState } from "react"
 import { CartContext } from '../../context/CartContext'
 import {addDoc, collection, Timestamp,getDocs, documentId,query,where, writeBatch} from 'firebase/firestore'
 import {db} from '../../services/firebase/index'
 
 const Checkout = () => {
-    const { cart, clearCart, total} = useContext(CartContext)
+    const { cart, clearCart, getTotal} = useContext(CartContext)
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState(0);
+    const [mail, setMail] = useState("");
 
     const generateOrder = async () => {
         try{
     const order = {
         buyer:{
-            name: 'federico gomez',
-            phone: '123456',
-            emai: 'fedeg@hotmail.com'
+            name: name,
+            phone: phone,
+            emai: mail
         },
         items:cart,
         date: Timestamp.fromDate(new Date()),
-        total: `${total}`
+        total: getTotal()
     }
 
     const productsids = cart.map(prod => prod.id)
@@ -63,8 +66,18 @@ const Checkout = () => {
 
     return(
         <div>
-            <h1>checkout</h1>
-            <h2>formulario</h2>
+            <h2>Complete los campos para poder terminar la compra</h2>
+            <form>
+                <label>Nombre: 
+                    <input type="text" onChange={(e) => {setName(e.target.value);}}/>
+                </label>
+                <label>Email:
+                    <input type="text" onChange={(e) => {setMail(e.target.value);}}/>
+                </label>
+                <label>Telefono:
+                    <input type="number" onChange={(e) => {setPhone(e.target.value);}}/>
+                </label>
+            </form>
             <button className="ButtonOpcion" onClick={generateOrder}>Comprar</button>
 
         </div>

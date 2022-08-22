@@ -29,7 +29,7 @@ const Cart= () => {
             <button onClick={() => clearCart()} className="ButtonOpcion">Borrar todo</button>
             { cart.map(p => <CartItem key={p.id} {...p}/>) }
             <h3 className='total'>Total: ${total}</h3>
-            <button><Link to ='/checkout' className='option'>Generar orden</Link></button>
+            <button><Link to ='/checkout' className='generateOrderBtn'>Generar orden</Link></button>
             </div>
 
         </>
