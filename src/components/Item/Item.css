@@ -29,7 +29,7 @@
 .card .contenido-card h3{
 	margin-bottom: 15px;
     margin-top: 3px;
-	color: #faa227;
+	color: #272727;
 }
 .card .contenido-card p{
 	line-height: 1.8;
@@ -39,26 +39,25 @@
 }
 .precio{
 	margin: 3px;
-	color: #faa227;
 }
 
 .card .contenido-card button{
 	padding: 10px;
 	margin: 10px;
 	text-decoration: none;
-	color: #faa227;
+	color: #ffffff;
     background-color: transparent;
     font-size: medium;
-	border: 1px solid  #faa227;
+	border: 1px solid  #000000;
 	border-radius: 4px;
 	transition: all 400ms ease;
 }
 .card .contenido-card button:hover{
-	background: #e98801;
+	background: #111111;
 	color: #fff;
 }
 .option{
-	color: #faa227;
+	color: #444444;
     cursor: pointer;
     text-decoration: none;
 }
