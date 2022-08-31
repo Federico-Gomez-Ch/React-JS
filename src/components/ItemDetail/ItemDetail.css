@@ -36,14 +36,14 @@
     margin: 10px;
 }
 .category{
-    color: #262322;
+    color: #cc9a02;
     font-size: 20px;
     margin: 0px;
     padding-bottom: 0px;
     text-transform: uppercase;
 }
 .stock {
-    color: #262322;
+    color: #cc9a02;
     font-size: 20px;
     margin-bottom: 5px;
 }
@@ -51,7 +51,7 @@
     margin-left: 50px;
     display: block;
     font-size: 20px;
-    color: #262322;
+    color: #cc9a02;
 }
 .thanks{
     margin: 2px;

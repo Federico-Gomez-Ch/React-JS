@@ -9,7 +9,7 @@ import { UserContextProvider} from './context/UserContext'
 import CartContainer from './components/CartContainer/CartContainer'
 import { NotificationProvider} from './Notification/Notification'
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url(//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold);
 </style>
 
 
@@ -37,5 +37,6 @@ function App() {
     </div>
   );
 }
-
+<footer>ppp
+</footer>
 export default App; 

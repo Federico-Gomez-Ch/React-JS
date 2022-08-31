@@ -1,17 +1,44 @@
-/* 
+
 .Navbar{
-  background-color: #ac2330;
-  height: 20%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
- */
+
 .logo{
+  display: flex;
   width: 10%;
 }
 
 .logoImg{
-  width: 100%;
+  width: 70%;
+}
+
+.secciones{
+    flex-grow: 0.2;
+    align-self: center;
+}
+
+.Option {
+    display: inline;
+    justify-content: right;
+    font-size: large;
+    color: black;
+    padding: 5px;
+    margin : 0px 30px 0px 30px;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .ActiveOption {
+    display: inline;
+    color: #cc9a02;
+    justify-content: right;
+    font-size: x-large;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
 }
