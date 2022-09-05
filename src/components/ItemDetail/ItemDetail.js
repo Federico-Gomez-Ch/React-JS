@@ -35,7 +35,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
 </div>
                 <p className='description'>{description}</p>
             </div>
-            <Link className='btnBack' to= '/'><img src="/images/icons8-back-arrow-64.png"/></Link>
+            <Link className='btnBack' to= '/'><img src="/images/icons8-back-arrow-64.png" alt=''/></Link>
         </div>
     )
 }
