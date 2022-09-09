@@ -35,7 +35,7 @@ const ItemListContainer = ({ greeting}) => {
         return <h1 className='item'>Cargando productos...</h1>
     }
     if(products.length === 0) {
-        return categoryId ? <h1>No hay productos en nuestra categoria {categoryId}</h1> : <h1>No hay productos disponibles</h1>
+        return categoryId ? <h1 className='negativeProducts'>No hay productos en nuestra categoria {categoryId}</h1> : <h1>No hay productos disponibles</h1>
     }
     
     return (
